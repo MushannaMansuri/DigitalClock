@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: url("https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+    overflow: hidden;
+}
+
+h2 {
+    /* text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-align: center;
+    color: black; */
+
+    letter-spacing: 5px;
+    position: relative;
+    font-size: 2rem;
+    font-family: sans-serif;
+    -webkit-text-stroke: 0.3vw white;
+    text-transform: uppercase;
+}
+
+h2::before {
+    letter-spacing: 5px;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    
+    color: darkblue;
+    -webkit-text-stroke: 0vw white;
+    /* border-right: 2px solid darkblue; */
+    overflow: hidden;
+    animation: animate 5s linear infinite;
+    -wibkit-DigitalClock: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+
+    70% {
+        width: 100%;
+    }
+}
+
+.clock {
+    display: flex;
+}
+
+.clock div {
+    margin: 5px;
+    position: relative;
+}
+
+.clock span {
+    /* border-radius: 10px; */
+    width: 100px;
+    height: 85px;
+    background-color: slateblue;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.clock .numbers {
+    border-radius: 8px;
+    width: 100px;
+    height: 85px;
+    background-color: slateblue;
+    opacity: 0.8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.clock .text {
+    height: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: darkblue;
+    opacity: 0.8;
+    border-radius: 2px;
+}
+
+#ampm {
+    bottom: 0;
+    margin-top: 86px;
+    /* position: absolute; */
+    height: 29px;
+    width: 65px;
+    font-size: 25px;
+}
